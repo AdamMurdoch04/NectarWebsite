@@ -1,0 +1,15 @@
+References:
+
+Koishigawa, Kristofer. 2020. "How to Use HTML to Open a Link in a New Tab". Freecodecamp. https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/.
+
+W3Schools. n.d-a. "HTML Span Tag". W3Schools. Accessed 16th September. https://www.w3schools.com/tags/tag_span.asp.
+
+W3Schools. n.d-b. "CSS Layout - The Position Property". W3Schools. Accessed 18th September. https://www.w3schools.com/css/css_positioning.asp.
+
+W3Schools. n.d-c. "HML Semantic Elements". W3Schools. Accessed 22nd September. https://www.w3schools.com/html/html5_semantic_elements.asp.
+
+
+
+List of Figures:
+
+*All illustrations, icons, images, etc were made by the author*

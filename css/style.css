@@ -1,0 +1,355 @@
+
+@font-face {
+    font-family: "Roboto Black";
+    src:url("../fonts/roboto/Roboto-Black.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    src:url("../fonts/roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    src:url("../fonts/roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Thin";
+    src:url("../fonts/roboto/Roboto-Thin.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Regular";
+    src:url("../fonts/roboto/Roboto-Regular.ttf");
+}
+
+/* Removes Default anchor Styles*/
+a {
+    color:rgb(255, 255, 255); /* Set anchor colour */
+    text-decoration: none; /* Removes anchor underline */
+    font-family: "Roboto Regular"; /* Sets anchor link font to Roboto Regular */
+    font-size: 15px; /* Set anchor font size to 15 */
+}
+
+/*Backdrop & primary styles*/
+html, body{
+    scroll-behavior: smooth; /* Allows auto scroll up to be smooth */
+    overflow-x: hidden; /* Cuts out content overflowing off page on x axis */
+    margin: 0; /* Sets margins of html and body to remove default borders */
+    padding: 0; /* Sets padding of html and body to remove default borders */
+    background-color: #F3A499;
+}
+
+.TopNav {
+    position: fixed; /* Keeps nav bar in fixed position to allow it to stay in place with scrolling */
+    background-color: transparent; /* Removes background to show body gradient */
+    height: 80px; /* Sets the height of the nav bar */
+    width: 100%; /* Sets width of nav bar to width of body which is the width of the screen */
+    padding-top: 0.6%; /* Removes top padding on nav bar */
+    margin: auto; /* centers the nav bar */
+    display: flex; /* Sets navbar to use flexbox */
+    z-index: 6; /* The higher the number the further to the front the content is shown (over = front | lower = back) */
+}
+
+.NavLinkContainer {
+    display: flex; /* Sets navbar links to use flexbox */
+    justify-content: flex-end; /* Sets navbar links to go to end of flexbox */
+    margin-left: auto; /* Helps align nav links to left of page */
+    margin-right: 2%;
+    padding-left: 2%; /* Adds padding to left side of nav links */
+}
+
+.NavLinkContainer div {
+    white-space: nowrap; /* Stop link text from starting a new line*/
+    padding-right: 30%;
+}
+
+.NavItems {
+    width: 100%; /* Sets div width to 100% of body width as the body is the parent */
+    margin: auto;
+    display: flex; /* Sets NavItems to use a flexbox */
+    align-items: center; /* Vertically aligns children of NavItems */
+}
+
+.Logo {
+    position: relative; /* Logo is positioned relative to the original position of the logo */
+    top: 50%; /* Gap making up 50% of the height of parent object is added + Works with line below to vertically centre logo */
+    padding-left: 0%;
+    float: left; /* Places the logo on the left side of the TopNav */
+}
+
+.Logo img {
+    height: 44.67px; /* Sets a fixed height to the logo */
+    width: 44.67px;
+}
+
+.AboveFoldContainer {
+    background-image: url("../images/OverlaySection1.png"); /* Background image of div is set to image saved in root folder */
+    background-position-x: center; /* Horizontally aligns the background image to the center */
+    background-position-y: bottom; /*Aligns bottom of the background image with the bottom of the section */
+    background-repeat: no-repeat; /* Stops background image from being repeated within the section to fill all space */
+    background-size: cover; /* Sets background image to cover the whole section area */
+    background-attachment: scroll;
+    z-index: 2;
+    display: flex;
+    justify-content: center; /* Center aligns the AboveFoldContainer children to the horizontal center */
+    align-items: center;
+    height: 101%; /* Sets height of Section1 which sets to 100vh. This ensures the AboveFoldContainer does not overflow or cause enexpected behaviour */
+    width: 100%;
+    flex-direction: column; /* Causes children of the AboveFoldContainer to vertically stack */
+}
+
+#Section1 {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Sets the width to size of viewport width while adding 2px to that in order to fill in random padding */
+    height: 100vh; /* Sets the height to size of viewport height while adding 2px to that in order to fill in random padding */
+    background-image: url("../images/PrimeImage.png"); /* Background image of div is set to image saved in root folder */
+    background-position-x: center; /* Horizontally aligns the background image to the center */
+    background-position-y: bottom; /*Aligns bottom of the background image with the bottom of the section */
+    background-repeat: no-repeat; /* Stops background image from being repeated within the section to fill all space */
+    background-size: cover; /* Sets background image to cover the whole section area */
+    box-sizing: border-box; /* Helps avoid overflow by forcing content to be kept within the set width of the section without adding to it */
+    background-attachment: fixed;
+}
+
+#Section2 {
+    background-image: linear-gradient(#D1A68F, #F3A499); /* Sets body colour to gradient*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#Product_Display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto; /* Sets height of parent to the height required to fit all children on the y axis */
+}
+#Product_Display img {
+    width: 80%;
+    max-width: 450px; /* Stops product display image from expanding beyond a specific size */
+    height: auto;
+}
+
+#Section3, #Section4, #Section5 {
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 50vh;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+#Section3 h2, #Section3 p, #Section4 h2, #Section4 p, #Section5 h2, #Section5 p{
+    flex: 1; /* Allows all flexbox items to have the same length */
+    margin: 0;
+}
+
+#Section3 h2, #Section4 h2, #Section5 h2, #BottomSection h2{
+    letter-spacing: 10px; /* Adds spacing to letters in text */
+}
+
+#BottomSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 8%;
+    padding-top: 8%;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+.CTAButtonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.SecondaryButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 55px;
+    font-family: "Roboto Regular";
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    background-color: transparent;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.PrimaryButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 55px;
+    font-family: "Roboto Regular";
+    font-size: 16px;
+    color: #181818;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.MainHeading {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    z-index: 3;
+}
+
+.SubHeading {
+    text-align: center;
+    line-height: 20px;
+    z-index: 3;
+}
+
+.Scroll_Icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    justify-content: center;
+    bottom: 0%;
+    z-index: 3;
+}
+
+.Scroll_Icon div {
+    width: 1px;
+    height: 100px;
+    background-color: #eeeeee;
+}
+
+/*text styles*/
+
+h1 {
+    font-family: "Roboto Regular";
+    font-size: 3.5rem;
+    letter-spacing: 3vw;
+    margin-left: 3%;
+}
+
+h2 {
+    font-family: "Roboto Bold";
+    font-size: 25px;
+}
+
+h3 {
+    font-family: "Roboto Medium";
+    font-size: 17px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color:#eeeeee;
+}
+
+p {
+    font-family: "Roboto Regular"; /* Getting custom @font-face font */
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1920px) { /* Sets properties in brackets when screen width is over 1366px */
+
+    #HamburgerIcon {
+        display: block; 
+    }
+
+    .CTAButtonContainer{
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #BottomSection p{
+        margin-bottom: 40px;
+    }
+
+    #Section2 {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 768px) { /* Adjust width as needed */
+    #Section3, #Section4, #Section5 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto; /* Adjust height */
+
+        margin-top: 170px;
+        margin-bottom: 170px;
+    }
+
+    #Section3{
+        margin-top: 0;
+    }
+
+    #Section3 h2, #Section3 p, #Section4 h2, #Section4 p, #Section5 h2, #Section5 p {
+        margin-bottom: 10px; /* Spacing between h2 and p on small screens */
+    }
+
+    #BottomSection h2, #BottomSection p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #BottomSection p{
+        margin-top: -10px;
+        margin-bottom: 40px;
+    }
+
+    #BottomSection{
+        margin-bottom: 80px;
+    }
+
+    .CTAButtonContainer{
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) { /* Adjust width as needed */
+    .CTAButtonContainer{
+        margin-top: 30px;
+        flex-direction: column;
+    }
+
+    #BottomSection{
+        margin-bottom: 80px;
+    }
+
+    #BottomSection p{
+        margin-top: -5px;
+        margin-bottom: 20px;
+    }
+
+    #Section2 {
+        height: 80vh;
+    }
+}
+
+/* REFERENCES
+Coyier, Chris. 2024. "The CSS Calculating Function Guide". CSS-Tricks. https://css-tricks.com/a-complete-guide-to-calc-in-css/
+Mozilla. n.d. "Box-Sizing". Mdn Web Docs. Accessed 12th November. https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+W3 Schools. n.d-a. "CSS Flex Property". W3 Schools. Accessed 15th November. https://www.w3schools.com/cssref/css3_pr_flex.php.
+W3 Schools. n.d-b. "CSS Background-Attachment Property". Accessed 17th November. https://www.w3schools.com/cssref/pr_background-attachment.php.
+W Schools. n.d-c. "CSS Multiple Backgrounds". Accessed 17th November. https://www.w3schools.com/css/css3_backgrounds.asp#:~:text=CSS%20allows%20you%20to%20add,is%20closest%20to%20the%20viewer. */
