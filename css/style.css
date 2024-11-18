@@ -24,7 +24,11 @@
     src:url("../fonts/roboto/Roboto-Regular.ttf");
 }
 
-/* Removes Default anchor Styles*/
+* {
+    cursor: none;
+}
+
+
 a {
     color:rgb(255, 255, 255); /* Set anchor colour */
     text-decoration: none; /* Removes anchor underline */
@@ -32,13 +36,42 @@ a {
     font-size: 15px; /* Set anchor font size to 15 */
 }
 
-/*Backdrop & primary styles*/
 html, body{
     scroll-behavior: smooth; /* Allows auto scroll up to be smooth */
     overflow-x: hidden; /* Cuts out content overflowing off page on x axis */
     margin: 0; /* Sets margins of html and body to remove default borders */
     padding: 0; /* Sets padding of html and body to remove default borders */
     background-color: #F3A499;
+}
+
+.custom-cursor{
+    z-index: 1000;
+    position: fixed;
+    left: 10px;
+    width: 15px; /* width of cursor */
+    height: 15px; /* height of cursor */
+    transform: translate(-50%, -50%);  /* allows custom cursor to center with mouse pointer */
+    background-color: #ffffff; /* sets colour of custom cursor */
+    mix-blend-mode: difference;  /* sets cursor to react with different colours behind it */
+    border-radius: 50%;  /* ensures custom cursor is a circle */
+    pointer-events: none; /* allows for underlying links to be clicked */
+    transition: width 0.3s, height 0.3s;  /* sets how long it will take to transition */
+}
+
+.custom-cursor.grow {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    transition: width 0.3s, height 0.3s;
+}
+
+.hidden{
+    opacity: 0;
+    transition: all 2s;
+}
+
+.show{
+    opacity: 1;
 }
 
 .TopNav {
@@ -79,10 +112,17 @@ html, body{
     float: left; /* Places the logo on the left side of the TopNav */
 }
 
-.Logo img {
-    height: 44.67px; /* Sets a fixed height to the logo */
+.LogoButton {
+    display: block; /* Sets logo to block display instead of flexbox */
+    width: fit-content; /* sets width to fit the size of the logo */
+}
+
+.LogoButton img {
+    height: 44.67px;
     width: 44.67px;
 }
+
+
 
 .AboveFoldContainer {
     background-image: url("../images/OverlaySection1.png"); /* Background image of div is set to image saved in root folder */
@@ -112,10 +152,11 @@ html, body{
     background-repeat: no-repeat; /* Stops background image from being repeated within the section to fill all space */
     background-size: cover; /* Sets background image to cover the whole section area */
     box-sizing: border-box; /* Helps avoid overflow by forcing content to be kept within the set width of the section without adding to it */
-    background-attachment: fixed;
+    background-attachment: fixed;  /* stops background image from scrolling with page to give parallax effect */
 }
 
 #Section2 {
+    padding-top: 5%;
     background-image: linear-gradient(#D1A68F, #F3A499); /* Sets body colour to gradient*/
     display: flex;
     justify-content: center;
@@ -237,6 +278,18 @@ html, body{
     width: 1px;
     height: 100px;
     background-color: #eeeeee;
+}
+
+footer{
+    display: flex;
+    padding-top: 6%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 4%;
+    background-color: transparent;
 }
 
 /*text styles*/
