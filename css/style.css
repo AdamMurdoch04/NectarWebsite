@@ -380,7 +380,7 @@ p {
     }
 
     .custom-cursor{
-        display: hidden;
+        display: none;
     }
 }
 
@@ -404,7 +404,7 @@ p {
     }
 
     .custom-cursor{
-        display: hidden;
+        display: none;
     }
 }
 
