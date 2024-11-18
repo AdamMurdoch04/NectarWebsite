@@ -378,6 +378,10 @@ p {
         flex-direction: row;
         gap: 20px;
     }
+
+    .custom-cursor{
+        display: hidden;
+    }
 }
 
 @media screen and (max-width: 450px) { /* Adjust width as needed */
@@ -397,6 +401,10 @@ p {
 
     #Section2 {
         height: 80vh;
+    }
+
+    .custom-cursor{
+        display: hidden;
     }
 }
 
