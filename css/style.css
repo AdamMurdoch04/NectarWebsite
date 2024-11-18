@@ -357,10 +357,12 @@ p {
     }
 
     #Section3 h2, #Section3 p, #Section4 h2, #Section4 p, #Section5 h2, #Section5 p {
+        padding-top: 15px;
         margin-bottom: 10px; /* Spacing between h2 and p on small screens */
     }
 
     #BottomSection h2, #BottomSection p{
+        padding-top: 15px;
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -388,6 +390,15 @@ p {
     .CTAButtonContainer{
         margin-top: 30px;
         flex-direction: column;
+    }
+
+    #Section3 h2, #Section3 p, #Section4 h2, #Section4 p, #Section5 h2, #Section5 p {
+        padding-top: 15px;
+        margin-bottom: 10px; /* Spacing between h2 and p on small screens */
+    }
+
+    #BottomSection h2, #BottomSection p{
+        padding-top: 15px;
     }
 
     #BottomSection{
